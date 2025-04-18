@@ -44,10 +44,6 @@ X_test = X[~mask]
 y_train = y[mask]
 y_test = y[~mask]
 
-# Add small random noise to training labels to improve generalization
-np.random.seed(42)
-y_train = y_train + np.random.normal(0, 0.02, size=y_train.shape)
-
 # Preprocessing
 preprocessor = ColumnTransformer(
     transformers=[
