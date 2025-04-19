@@ -35,6 +35,16 @@ Key statistics for the dataset are as follows:
 * **Mean Price per Square Foot:** $230.71
 
 These figures highlight the diversity of the Austin housing market, with the majority of properties clustered between approximately $300,000 and $550,000. The relatively high standard deviation reflects a significant spread in house prices, indicating the challenge of modeling such a dynamic and variable market.
+## Model Architecture:
+This project uses a **Random Forest Regressor**, a powerful  learning method based on decision trees. Random Forest builds multiple decision trees and averages their predictions to produce a more stable and accurate output. It’s particularly effective for real-world data with non-linear relationships and noisy variables — making it a strong fit for modeling complex housing markets like Austin.
+
+The model was implemented using scikit-learn with the following hyperparameters:
+- **n_estimators** = 300: Builds 300 trees in the forest to increase stability and reduce variance.
+- **max_depth** = 15: Limits each tree to 15 splits (questions) to prevent overfitting.
+- **min_samples_split** = 10: A node must have at least 10 samples to be split.
+- **min_samples_leaf** = 5: Each final leaf in a tree must contain at least 5 samples.
+
+The data was preprocessed using a ColumnTransformer, which applied OneHotEncoding to categorical features (homeType and zipcode) and passed through all numeric features without modification. A custom train/test split was used to maintain reproducibility, and target values were log-transformed before training to account for the skewed price distribution. After training, predictions were transformed back to normal scale using exponential transformation.
 
 ## Results and Analysis:
 The model achieved an **R² score of 0.73**, meaning it explains approximately **73% of the variability** in housing prices. This is a strong result, especially considering that many real-world factors affecting property prices — such as renovation quality, neighborhood reputation, or unique amenities — are not captured within the available dataset. 
