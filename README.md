@@ -5,7 +5,7 @@ This project builds a machine learning model to predict residential housing pric
 In this project, I developed a Random Forest regression model to predict housing prices in Austin, Texas. The model leverages key property features such as living area size, lot size, number of bedrooms and bathrooms, garage spaces, number of stories, year built, average school rating, property tax rate, and home type. The dataset was carefully cleaned by removing outliers (homes priced above $1.5M or below $100k), handling missing values, and engineering new features such as the bathroom-to-bedroom ratio. The original dataset, sourced from 2024 Austin housing market data, included a diverse range of residential properties across different neighborhoods, providing a realistic mix of affordable, mid-range, and luxury homes. After preprocessing, the dataset offered a strong foundation for training a machine learning model to capture both general trends and regional pricing variations.
 
 ## Technologies and Libraries
-* **Python 3**: general-purpose programming language used for data processing, machine learning, and visualization.
+* **Python 3**: General-purpose programming language used for data processing, machine learning, and visualization.
 * **pandas**: Library for data manipulation and analysis, used to clean and structure the dataset.
 * **numpy**: Library for numerical operations, supporting array handling and mathematical functions.
 * **scikit-learn**: Machine learning library used to build, train, and evaluate the Random Forest regression model.
