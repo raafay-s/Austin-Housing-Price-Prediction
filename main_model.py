@@ -9,7 +9,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
 # Load dataset
-file_path = 'C:/Users/raafa/Downloads/austinHousingData.csv'  # Update if needed
+file_path = 'C:/Users/raafa/Downloads/austinHousingData.csv'
 df = pd.read_csv(file_path)
 
 # Remove outliers
