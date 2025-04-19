@@ -3,7 +3,7 @@ This section provides visual analyses to better understand both the distribution
 
 *Note: The code used to generate these graphs can be found in the file graph_visualizations.py.*
 #
-## 📊 1. Distribution of House Prices in Austin Dataset
+## 1. Distribution of House Prices in Austin Dataset
 **Description**: This histogram displays the distribution of house prices in the Austin housing dataset. The x-axis represents house price ranges, while the y-axis shows the number of homes within each price range.
 
 <p align="center">
@@ -19,7 +19,7 @@ This section provides visual analyses to better understand both the distribution
 **Finding**: The skewed distribution toward lower-priced homes indicates that the model must generalize across a highly imbalanced dataset, making predictions for luxury properties particularly challenging.
 #
 
-## 📈 2. Actual vs Predicted House Prices
+## 2. Actual vs Predicted House Prices
 **Description**: This scatter plot compares actual house prices (x-axis) with predicted prices from the ML model (y-axis). The red dashed line represents perfect predictions (where predicted = actual).
 
 <p align="center">
@@ -35,7 +35,7 @@ This section provides visual analyses to better understand both the distribution
 **Finding:** The model predicts mid-range homes reasonably well but tends to underestimate prices for more expensive properties, highlighting a need for richer features to improve luxury home predictions.
 
 #
-## 🔎 Overall Conclusion
+## Overall Conclusion
 Together, the distribution histogram and the actual vs predicted scatter plot provide a deeper understanding of the challenges faced in predicting Austin housing prices.
 The dataset’s right-skewed distribution means the majority of homes are clustered at lower price points, while luxury properties are rarer and more difficult to predict accurately.
 The scatter plot confirms that the model performs well for mid-range homes but shows greater variability and underestimation at higher price points.
