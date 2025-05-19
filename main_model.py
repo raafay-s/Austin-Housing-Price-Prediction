@@ -36,7 +36,7 @@ X = df[['livingAreaSqFt', 'lotSizeSqFt', 'zipcode', 'garageSpaces',
 
 y = np.log1p(df['latestPrice'])  # Log-transform target
 
-# CUSTOM TRAIN/TEST SPLIT
+# Custom Train/Test Split
 np.random.seed(42)
 mask = np.random.rand(len(df)) < 0.8  # 80% train, 20% test
 X_train = X[mask]
